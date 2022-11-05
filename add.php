@@ -21,7 +21,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   $sql = "INSERT INTO transactions (title,description,transaction_type,amount,user_id) VALUES('$title', '$description', '$transaction_type', '$amount', '$userid')";
 
   if(mysqli_query($conn, $sql)){
-      echo "<meta http-equiv='refresh' content='0'>";
       header('Location: dashboard.php');
   }else {
       echo 'There is an error in connection: ' . mysqli_connect_error();

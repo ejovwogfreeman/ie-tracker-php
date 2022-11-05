@@ -12,8 +12,6 @@ include('./partials/header.php');
 
     $transactions = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $latest_transactions = array_slice($transactions, 0, 3);
-
     $income_array = [];
     $expense_array = [];
 
@@ -129,59 +127,12 @@ include('./partials/header.php');
           </ul>
         </div>
       </div>
-
-
-      <!-- Button trigger for modal -->
-      <button type="button" class="btn btn-success d-sm-block d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add Transaction
-      </button>
-      <button type="button" class="btn btn-success d-sm-none d-block me-md-0 me-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        +
-      </button>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Transaction Form</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <?php include('add.php') ?>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <div>
-      <h1 class="mb-3 d-sm-block d-none">Your Dashboard</h1>
-      <h5 class="mb-3 d-sm-none d-block">Your Dashboard</h5>
-      <div class="row mx-0">
-        <div class="col-lg-6 bg-light mb-2">
-          <div class="text-center row p-3 primary primary-bottom">
-              Your Balance(₦): <h3 class="m-0"><?php echo $balance > 0 ? '+' : null ?><?php echo $balance ?></h3>
-          </div>
-          <div class="row text-center">
-              <div class="col-6 success success-bottom p-3">Your Income(₦): <h3  class="m-0 text-success"><?php echo $income ? '+' : null ?><?php echo $income ?></h3></div>
-              <div class="col-6 danger danger-bottom p-3">Your Expense(₦): <h3 class="m-0 text-danger"><?php echo $expense ? '-' : null ?><?php echo $expense ?></h3></div>
-          </div>
-        </div>
-        <div class="col-lg-6 pe-0 d-lg-block d-none">
-          <div class="primary-right" id="piechart" style="height: 185px;"></div>
-        </div>
-      </div>
-      <hr class="mt-4">
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row m-0">
-      <div class="col-lg-6 m-0 p-0">
-        <h5>Recent Transactions</h5>
+  <div class="container px-0">
+      <div class="m-0 p-0">
+        <h5>Transaction History</h5>
         <div class="m-0 p-0">
-
-            <?php foreach($latest_transactions as $x): ?>
+            <?php foreach($transactions as $x): ?>
               <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">
                 <h5 class="m-0"><?php echo $x['title'] ?></h5>
                 <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?><?php echo '₦'.$x['amount'] ?></p></div></div>
@@ -190,76 +141,11 @@ include('./partials/header.php');
                 <div class="row"><div class="col-5">Transaction Date</div><div class="col-1">:</div><div class="col-6"><small class="m-0">created at <?php echo $x['created_at'] ?></small></div></div>
               </div>
             <?php endforeach; ?>
-
-        </div>
-      </div>
-
-      <div class="col-lg-6 m-0 pe-0 ps-0 ps-lg-2">
-        <div class="row">
-          <div class="d-flex align-items-center justify-content-between">
-            <h5 class="mb-0">Recent Wish On Your Wish List</h5>
-            <button type="button" class="btn btn-success me-md-0 me-0" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-              +
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add To Wish List</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <?php include('wish_modal.php') ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <h6 class="mb-0" style="width: 80%" >Total Amount On Your Wish List: ₦<?php echo $total_wish ?></h6>
-        </div>
-        <div class="m-0 p-0">
-              <div>
-            <?php foreach($latest_wish as $x): ?>
-              <div class="bg-light p-2 my-2 primary">
-                <div class="row"><div class="col-8"><h5 class="m-0"><?php echo $x['wish_title'] ?></h5></div><div class="col-1"><h5 class="m-0">:</h5></div><div class="col-3"><h5 class="m-0">₦<?php echo $x['wish_amount'] ?></h5></div></div>
-                <div class="row"><div class="col-5"><small>Created At <?php echo $x['wish_created_at'] ?></small></div></div>
-              </div>
-            <?php endforeach; ?>
-            </div>
-            <div class="bg-light p-2 my-2 d-flex align-items-center text-center" style="height: 199px">
-              This is the V.1.0.0 of the Expense Tracker App by Group1, updates will be made soon. just anticipate!
-            </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-
-    var data = google.visualization.arrayToDataTable([
-      ['Transactions', 'Amounts'],
-      ['Income',     <?php echo $income ?>],
-      ['Expense',      <?php echo $expense ?>],
-    ]);
-
-    var options = {
-      title: 'Income Expense Chart'
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-  }
-</script>
+</div>
 
 
 <?php include('./partials/footer.php') ?>

@@ -13,36 +13,21 @@ include('./partials/header.php');
     $transactions = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     $income_array = [];
-    $expense_array = [];
+    $all_income = [];
 
     for($i=0; $i < count($transactions); $i++){
         if($transactions[$i]['transaction_type'] === 'income') {
             array_push($income_array, $transactions[$i]['amount']);
-        } else {
-            array_push($expense_array, $transactions[$i]['amount']);
+        }
+    }
+
+    for($i=0; $i < count($transactions); $i++){
+        if($transactions[$i]['transaction_type'] === 'income') {
+            array_push($all_income, $transactions[$i]);
         }
     }
 
     $income = array_sum($income_array); 
-    $expense = array_sum($expense_array);
-
-    $balance = $income - $expense;
-
-    $sql2 = "SELECT * FROM wish WHERE wish_user_id=$userid ORDER BY -wish_created_at";
-
-    $result2 = mysqli_query($conn, $sql2);
-
-    $wish = mysqli_fetch_all($result2, MYSQLI_ASSOC);
-
-    $latest_wish = array_slice($wish, 0, 3);
-
-    $wish_array = [];
-
-    for($i=0; $i < count($wish); $i++){
-        array_push($wish_array, $wish[$i]['wish_amount']);
-    }
-
-    $total_wish = array_sum($wish_array);
 
 ?>
 
@@ -129,19 +114,20 @@ include('./partials/header.php');
       </div>
     </div>
   <div class="container px-0">
-  <div class="row">
-          <h5 class="mb-0 d-flex align-items-center justify-content-between"><span>Total Amount On Your Wish List:</span> <span>₦<?php echo $total_wish ?></span></h5>
-        </div>
+      <div class="m-0 p-0">
+        <h5 class="d-flex align-items-center justify-content-between"><span>All Income</span><span><?php echo $income?></span></h5>
         <div class="m-0 p-0">
-
-            <?php foreach($wish as $x): ?>
-              <div class="bg-light p-2 my-2 primary">
-                <div class="row"><div class="col-8"><h5 class="m-0"><?php echo $x['wish_title'] ?></h5></div><div class="col-1"><h5 class="m-0">:</h5></div><div class="col-3"><h5 class="m-0">₦<?php echo $x['wish_amount'] ?></h5></div></div>
-                <div class="row"><div class="col-5"><small>Created At <?php echo $x['wish_created_at'] ?></small></div></div>
+            <?php foreach($all_income as $x): ?>
+              <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">
+                <h5 class="m-0"><?php echo $x['title'] ?></h5>
+                <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?><?php echo '₦'.$x['amount'] ?></p></div></div>
+                <div class="row"><div class="col-5">Description</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['description'] ?></small></div></div>
+                <div class="row"><div class="col-5">Transaction Type</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['transaction_type'] ?></small></div></div>
+                <div class="row"><div class="col-5">Transaction Date</div><div class="col-1">:</div><div class="col-6"><small class="m-0">created at <?php echo $x['created_at'] ?></small></div></div>
               </div>
             <?php endforeach; ?>
-
         </div>
+      </div>
     </div>
 </div>
 </div>
