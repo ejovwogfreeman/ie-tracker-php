@@ -110,5 +110,14 @@
 })()
 </script>
 
+<!-- AOS javascript link -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 50,
+        duration: 1000
+    });
+</script>
+
 </body>
 </html>
