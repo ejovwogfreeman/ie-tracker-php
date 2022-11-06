@@ -16,7 +16,7 @@
     background-color: #d3d3d3;
   }
   nav {
-    background: rgba(0, 0, 0, 0.5);
+    background: #04062D;
     z-index: 0;
   }
   @media screen and (max-width: 500px) {
