@@ -73,13 +73,13 @@ if(isset($_SESSION['message'])) {
 <div class="container bg-light my-sm-5 my-0 p-lg-5 p-3" id="about">
   <h2 class="text-center mb-lg-4 my-3">ABOUT US</h2>
   <div class="row text-dark" style="text-align: justify">
-      <div class="col-lg-6 d-lg-block" data-aos="fade-right">
+      <div class="col-lg-6 d-lg-block" data-aos="fade-up">
         <p>We aim at making small buisinesses and individuals keep track of their spendings, thereby enabling them
         to get a value for every cash they spend. Tracking your spending is often the first step in getting
         your finances in order. <br/> Expense tracker apps put more of an emphasis on your spending. 
         These apps usually categorize your expenses and help you get a good idea of your purchasing behavior.</p>
       </div>
-      <div class="col-lg-6 d-lg-block" data-aos="fade-left">
+      <div class="col-lg-6 d-lg-block" data-aos="fade-up">
         <p>This app holds you accountable by requiring you to manually input each one of your transactions, 
            through a form provided. <br/>
            This app is no doubt the solution to keep track of your spending because it provides a page to view the following<br/>
@@ -142,11 +142,11 @@ if(isset($_SESSION['message'])) {
 <div class="header-bg py-5">
   <div class="container">
     <div class="row text-light text-center text-lg-start">
-      <div class="col-lg-9 col-sm-12 my-auto" data-aos="fade-right">
+      <div class="col-lg-9 col-sm-12 my-auto" data-aos="fade-down">
         <h2>Call To Action</h2>
         <p>By understanding what you spend money on and how much you spend, you can see exactly where your cash is going and areas where you can cut back.</p>
       </div>
-      <div class="col-lg-3 col-sm-12 my-auto  text-lg-end text-center" data-aos="fade-left">
+      <div class="col-lg-3 col-sm-12 my-auto  text-lg-end text-center" data-aos="fade-up">
       <?php if(isset($_SESSION['user_id'])==false): ?>
           <a href="signin.php" class="btn btn-primary">Get Started</a>
           <?php else: ?>
@@ -181,7 +181,7 @@ if(isset($_SESSION['message'])) {
   <h2 class="text-center mb-lg-4 my-3">TEAM</h2>
   <div class="row text-dark" style="text-align: justify">
     <div class="row">
-      <div class="col-lg-6" data-aos="fade-right">
+      <div class="col-lg-6" data-aos="fade-down">
         <div class="row">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
@@ -194,7 +194,7 @@ if(isset($_SESSION['message'])) {
           </div>
         </div>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
+      <div class="col-lg-6" data-aos="fade-up">
         <div class="row">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
@@ -207,7 +207,7 @@ if(isset($_SESSION['message'])) {
           </div>
         </div>
       </div>
-      <div class="col-lg-6" data-aos="fade-right">
+      <div class="col-lg-6" data-aos="fade-down">
         <div class="row">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
@@ -220,7 +220,7 @@ if(isset($_SESSION['message'])) {
           </div>
         </div>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
+      <div class="col-lg-6" data-aos="fade-up">
         <div class="row">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
@@ -285,7 +285,7 @@ if(isset($_SESSION['message'])) {
 <div class="container bg-light my-sm-5 my-0 p-lg-5 p-3" id="contact">
   <h2 class="text-center mb-lg-4 my-3">COTACT US</h2>
     <div class="row text-dark text-center text-lg-start">
-      <div class="col-lg-6 col-sm-12 my-auto pe-lg-5" data-aos="fade-right">
+      <div class="col-lg-6 col-sm-12 my-auto pe-lg-5" data-aos="fade-down">
         <div class="row">
           <div class="col-1">
           <i class="bi bi-geo-alt"></i>
@@ -315,7 +315,7 @@ if(isset($_SESSION['message'])) {
         </div>
         <div class="mapouter"><div class="gmap_canvas"><iframe title='google-map' width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=ring%20road%20benin%20city%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
       </div>
-      <div class="col-lg-6 col-sm-12 my-auto" data-aos="fade-left">
+      <div class="col-lg-6 col-sm-12 my-auto" data-aos="fade-up">
       <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       <div class="mb-3">
         <label for="exampleInputUsername" class="form-label">Your Name</label>
