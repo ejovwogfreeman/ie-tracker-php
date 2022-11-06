@@ -103,7 +103,7 @@ if(isset($_SESSION['message'])) {
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            Help keep records  of your spending: IE-Tracker can help you monitor the expenses you're paying, which can help you prevent exceeding your budget. Each time you use your credit card or deposit money from a bank account, consider compiling the purchase and its amount on a document.
             </div>
           </div>
         </div>
@@ -115,7 +115,9 @@ if(isset($_SESSION['message'])) {
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            Audit Initiated Expenses:
+Financial fraud is always a problem to keep an eye out for; one that even large corporations are not safe from.
+Expense management procedures always include steps to control unexpected variances in activity that could point to fraudulent behavior. The most common examples of which are mischaracterized or fake entries, overstated expenses, and making multiple reimbursement claims for a single purchase.
             </div>
           </div>
         </div>
@@ -127,7 +129,7 @@ if(isset($_SESSION['message'])) {
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            Our vision is to be a Leader of the "Income Expense Management processes" automation segment. Being a Leader means we will achieve Product Excellence, Implementation Excellence, Operational Excellence and superior customer satisfaction.
             </div>
           </div>
         </div>
@@ -244,37 +246,47 @@ if(isset($_SESSION['message'])) {
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <h5 class="m-0">Our Goal</h5>
+            <h5 class="m-0">What does an IE-Tracker app do?</h5>
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            IE-Tracker apps connect to your bank account and/or credit cards to track and categorize your expenses, giving you a good idea of your purchasing behavior. This can help identify spending areas where you could make cuts.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h5 class="m-0">Our Mission</h5>
+              <h5 class="m-0"> Should I use an expense tracker app?</h5>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            Keeping track of your income and expenses is an important part of managing your overall finances. While you don't need an app to help you record your purchases, it can certainly come in handy.Some income-expense tracker apps automatically sync to your bank accounts and credit cards, which can save you time instead of you having to manually gather all your different credit card statements and such. Other apps help you categorize your spending so you can better understand your purchasing habits.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <h5 class="m-0">Our Vission</h5>
+            <h5 class="m-0">What is the best way to track your incomes and expenses?</h5>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">There's no perfect expense tracking plan that fits everyone. Each person has their own method — unless of course, you have no method at all. While some people may find looking at their monthly credit or debit card statements enough to keep their spending in check, others need something more hands-on. You can opt to track your transactions daily in a spreadsheet or to use technology like an income-expense tracker app. If you're not sure which is the best program for you, try out a few different methods to see what sticks.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <h5 class="m-0">Are income-expense tracker apps worth the cost?</h5>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
+            IE-Tracker apps are often either free, offer a free version or have a free trial for users to test out before signing up. This way, you can decide for yourself if the app is right for you. If you're a serious budgeter or are tracking expenses for a small business, it generally will be worth splurging on a paid app.
+          </div>
           </div>
         </div>
       </div>

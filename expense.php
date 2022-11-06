@@ -115,7 +115,7 @@ include('./partials/header.php');
     </div>
   <div class="container px-0">
       <div class="m-0 p-0">
-        <h5 class="d-flex align-items-center justify-content-between"><span>All Expenses</span><span><?php echo $expense?></span></h5>
+        <h5 class="d-flex align-items-center justify-content-between"><span>All Expenses</span><span>₦<?php echo $expense?></span></h5>
         <div class="m-0 p-0">
             <?php foreach($all_expense as $x): ?>
               <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">

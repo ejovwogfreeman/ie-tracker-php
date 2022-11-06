@@ -10,6 +10,20 @@
     ul {
         list-style-type: none;
     }
+    .social-media {
+        font-size: 30px;
+    }
+
+    .social-media i {
+        margin-right: 10px;
+        color: #0275d8;
+        transition: 0.5s ease-in-out;
+    }
+    .social-media i:hover {
+        margin-right: 10px;
+        color: #04062D;
+        cursor: pointer;
+    }
 </style>
 
 <footer class="bg-light">
@@ -32,7 +46,7 @@
         <div class="row pt-3">
             <div class="col-lg-3 col-md-6">
                 <h5>Address</h5>
-                <p>Benin City, Edo State, Nigeria.</p>
+                <p>59 C, ICE Road, Off Wire Rd, <br/> Benin City. <br/> Edo State, Nigeria.</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5>Useful Links</h5>
@@ -59,7 +73,7 @@
             <div class="col-lg-3 col-md-6">
                 <h5>Our Social Networks</h5>
                 <p>Conntect With us on our various social media platforms and never miss an update from us.</p>
-                <div><i class="bi bi-coin"></i><i class="bi bi-coin"></i><i class="bi bi-coin"></i></div>
+                <div class="social-media"><i class="bi bi-facebook"></i><i class="bi bi-twitter"></i><i class="bi bi-instagram"></i><i class="bi bi-linkedin"></i><i class="bi bi-github"></i></div>
             </div>
         </div>
     </div>
