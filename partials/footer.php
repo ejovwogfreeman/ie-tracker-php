@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5>Our Social Networks</h5>
-                <p>Conntect With us on our various social media platforms and never miss an update from us.</p>
+                <p>Connect With us on our various social media platforms and never miss an update from us.</p>
                 <div class="social-media"><i class="bi bi-facebook"></i><i class="bi bi-twitter"></i><i class="bi bi-instagram"></i><i class="bi bi-linkedin"></i><i class="bi bi-github"></i></div>
             </div>
         </div>

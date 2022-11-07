@@ -88,7 +88,7 @@ if(isset($_SESSION['message'])) {
   <h2 class="text-center mb-lg-4 my-3">ABOUT US</h2>
   <div class="row text-dark" style="text-align: justify">
       <div class="col-lg-6 d-lg-block" data-aos="fade-up">
-        <p>We aim at making small buisinesses and individuals keep track of their spendings, thereby enabling them
+        <p>We aim at making small businesses and individuals keep track of their spendings, thereby enabling them
         to get a value for every cash they spend. Tracking your spending is often the first step in getting
         your finances in order. <br/> Expense tracker apps put more of an emphasis on your spending. 
         These apps usually categorize your expenses and help you get a good idea of your purchasing behavior.</p>
@@ -138,7 +138,7 @@ Expense management procedures always include steps to control unexpected varianc
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <h5 class="m-0">Our Vission</h5>
+            <h5 class="m-0">Our Vision</h5>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -335,7 +335,7 @@ Expense management procedures always include steps to control unexpected varianc
 </div>
 
 <div class="container bg-light my-sm-5 my-0 p-lg-5 p-3" id="contact">
-  <h2 class="text-center mb-lg-4 my-3">COTACT US</h2>
+  <h2 class="text-center mb-lg-4 my-3">CONTACT US</h2>
     <div class="row text-dark text-center text-lg-start">
       <div class="col-lg-6 col-sm-12 my-auto pe-lg-5" data-aos="fade-down">
         <div class="row">
@@ -357,7 +357,7 @@ Expense management procedures always include steps to control unexpected varianc
           </div>
           <div class="col-11">
             <h5>Email:</h5>
-            <p>ietraker@company.com</p>
+            <p>ietracker@company.com</p>
           </div>
         </div>
         <div class="row">
