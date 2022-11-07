@@ -280,9 +280,8 @@ Expense management procedures always include steps to control unexpected varianc
 </div>
 
 <div class="container bg-light my-sm-5 my-0 p-lg-5 p-3 text-center" id="faq">
-  <div data-aos="fade-down">
   <h2 class="text-center mb-lg-4 my-3">FAQ</h2>
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExample" data-aos="fade-down">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -329,7 +328,6 @@ Expense management procedures always include steps to control unexpected varianc
           </div>
           </div>
         </div>
-      </div>
       </div>
       </div>
 </div>
