@@ -176,7 +176,7 @@ Expense management procedures always include steps to control unexpected varianc
         <div class="mb-4">
           <h6>My SQL</h6>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 65%">10%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">10%</div>
           </div>
         </div>
         <div class="mb-4">
