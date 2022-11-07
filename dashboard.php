@@ -30,6 +30,10 @@ include('./partials/header.php');
 
     $balance = $income - $expense;
 
+    // $reg_bal = "<script>alert(reg_bal)</script>";
+
+    
+
     $sql2 = "SELECT * FROM wish WHERE wish_user_id=$userid ORDER BY -wish_created_at";
 
     $result2 = mysqli_query($conn, $sql2);
@@ -160,11 +164,11 @@ include('./partials/header.php');
       <div class="row mx-0">
         <div class="col-lg-6 bg-light mb-2">
           <div class="text-center row p-3 primary primary-bottom">
-              Your Balance(₦): <h3 class="m-0"><?php echo $balance > 0 ? '+' : null ?><?php echo $balance ?></h3>
+              Your Balance(₦): <h3 class="m-0"><?php echo $balance > 0 ? '+' : null ?><span id="bal"></span></h3>
           </div>
           <div class="row text-center">
-              <div class="col-6 success success-bottom p-3">Your Income(₦): <h3  class="m-0 text-success"><?php echo $income ? '+' : null ?><?php echo $income ?></h3></div>
-              <div class="col-6 danger danger-bottom p-3">Your Expense(₦): <h3 class="m-0 text-danger"><?php echo $expense ? '-' : null ?><?php echo $expense ?></h3></div>
+              <div class="col-6 success success-bottom p-3">Your Income(₦): <h3  class="m-0 text-success"><?php echo $income ? '+' : null ?><span id="inc"></span></h3></div>
+              <div class="col-6 danger danger-bottom p-3">Your Expense(₦): <h3 class="m-0 text-danger"><?php echo $expense ? '-' : null ?><span id="exp"></span></h3></div>
           </div>
         </div>
         <div class="col-lg-6 pe-0 d-lg-block d-none">
@@ -184,7 +188,7 @@ include('./partials/header.php');
             <?php foreach($latest_transactions as $x): ?>
               <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">
                 <h5 class="m-0"><?php echo $x['title'] ?></h5>
-                <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?><?php echo '₦'.$x['amount'] ?></p></div></div>
+                <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?>₦<?php echo $x['amount'] ?></p></div></div>
                 <div class="row"><div class="col-5">Description</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['description'] ?></small></div></div>
                 <div class="row"><div class="col-5">Transaction Type</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['transaction_type'] ?></small></div></div>
                 <div class="row"><div class="col-5">Transaction Date</div><div class="col-1">:</div><div class="col-6"><small class="m-0">created at <?php echo $x['created_at'] ?></small></div></div>
@@ -218,7 +222,7 @@ include('./partials/header.php');
           </div>
         </div>
         <div class="row">
-          <h6 class="mb-0" style="width: 80%" >Total Amount On Your Wish List: ₦<?php echo $total_wish ?></h6>
+          <h6 class="mb-0" style="width: 80%" >Total Amount On Your Wish List: ₦<span id="wish"></span></h6>
         </div>
         <div class="m-0 p-0">
               <div>
@@ -237,6 +241,30 @@ include('./partials/header.php');
     </div>
   </div>
 </div>
+
+<script>
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+let bal = <?php echo $balance ?>;
+let inc = <?php echo $income ?>;
+let exp = <?php echo $expense ?>;
+let wish = <?php echo $total_wish ?>;
+
+let reg_bal = (numberWithCommas(bal));
+let reg_inc = (numberWithCommas(inc));
+let reg_exp = (numberWithCommas(exp));
+let reg_wish = (numberWithCommas(wish));
+
+document.getElementById("bal").textContent = reg_bal;
+document.getElementById("inc").textContent = reg_inc;
+document.getElementById("exp").textContent = reg_exp;
+document.getElementById("wish").textContent = reg_wish;
+
+</script>
+
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">

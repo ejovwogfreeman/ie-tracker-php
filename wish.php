@@ -130,7 +130,7 @@ include('./partials/header.php');
     </div>
   <div class="container px-0">
   <div class="row">
-          <h5 class="mb-0 d-flex align-items-center justify-content-between"><span>Total Amount On Your Wish List:</span> <span>₦<?php echo $total_wish ?></span></h5>
+          <h5 class="mb-0 d-flex align-items-center justify-content-between"><span>Total Amount On Your Wish List:</span><span>₦<span id="wish"></span></span></h5>
         </div>
         <div class="m-0 p-0">
 
@@ -146,5 +146,20 @@ include('./partials/header.php');
 </div>
 </div>
 
+
+<script>
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+let wish = <?php echo $total_wish ?>;
+
+let reg_wish = (numberWithCommas(wish));
+
+document.getElementById("wish").textContent = reg_wish;
+
+
+</script>
 
 <?php include('./partials/footer.php') ?>
