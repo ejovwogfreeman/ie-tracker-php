@@ -167,14 +167,24 @@ Expense management procedures always include steps to control unexpected varianc
         <img src="./images/web.gif" alt="" class="img-fluid">
       </div>
       <div class="col-lg-6 d-lg-block my-auto" data-aos="fade-down">
-        <p>Whether you want an expense tracker app that easily captures all your transaction data, one that automates the expense
-           reporting process at your job or one that holds you accountable by requiring you to manually input each one of your transactions, 
-           there’s an app out there for you. <br/>
-           This is typically an example of the type that requires you to manually input all of your transactions and provides a page to view the following<br/>
-           <i class="bi bi-check2-circle"></i> &nbsp; All Transactions <br/>
-           <i class="bi bi-check2-circle"></i> &nbsp; All Income <br/>
-           <i class="bi bi-check2-circle"></i> &nbsp; All Expenses
-        </p>
+        <div class="mb-4">
+          <h6>PHP</h6>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">65%</div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <h6>JavaScript</h6>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">10%</div>
+          </div>
+        </div>
+        <div>
+          <h6>CSS</h6>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
+          </div>
+        </div>
       </div>
     </div>
 </div>
@@ -184,7 +194,7 @@ Expense management procedures always include steps to control unexpected varianc
   <div class="row text-dark" style="text-align: justify">
     <div class="row">
       <div class="col-lg-6" data-aos="fade-down">
-        <div class="row">
+        <div class="row border">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -197,7 +207,7 @@ Expense management procedures always include steps to control unexpected varianc
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-up">
-        <div class="row">
+        <div class="row border">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -210,7 +220,7 @@ Expense management procedures always include steps to control unexpected varianc
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-down">
-        <div class="row">
+        <div class="row border">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -223,7 +233,7 @@ Expense management procedures always include steps to control unexpected varianc
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-up">
-        <div class="row">
+        <div class="row border">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -304,25 +314,29 @@ Expense management procedures always include steps to control unexpected varianc
           </div>
           <div class="col-11">
             <h5>Location:</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+                59 C, ICE Road, Off Wire Rd, <br/>
+                Benin City. <br/>
+                Edo State, Nigeria. <br/>
+            </p>
           </div>
         </div>
         <div class="row">
           <div class="col-1">
-          <i class="bi bi-geo-alt"></i>
+          <i class="bi bi-envelope"></i>
           </div>
           <div class="col-11">
             <h5>Email:</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>ietraker@company.com</p>
           </div>
         </div>
         <div class="row">
           <div class="col-1">
-          <i class="bi bi-geo-alt"></i>
+          <i class="bi bi-telephone"></i>
           </div>
           <div class="col-11">
             <h5>Call:</h5>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>+234 816 447 1007</p>
           </div>
         </div>
         <div class="mapouter"><div class="gmap_canvas"><iframe title='google-map' width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=ring%20road%20benin%20city%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
