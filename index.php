@@ -39,6 +39,20 @@ if(isset($_SESSION['message'])) {
       animation-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
       animation-iteration-count: infinite;
   }
+    .social-media-icon {
+        font-size: 20px;
+    }
+
+    .social-media-icon i {
+        margin-right: 10px;
+        color: #0275d8;
+        transition: 0.5s ease-in-out;
+    }
+    .social-media-icon i:hover {
+        margin-right: 10px;
+        color: #04062D;
+        cursor: pointer;
+    }
     
   @keyframes bounce {
       from {
@@ -203,10 +217,10 @@ Expense management procedures always include steps to control unexpected varianc
 
 <div class="container bg-light my-sm-5 my-0 p-lg-5 p-3" id="team">
   <h2 class="text-center mb-lg-4 my-3">TEAM</h2>
-  <div class="row text-dark" style="text-align: justify">
-    <div class="row">
+  <div class="row text-dark mx-0 px-0" style="text-align: justify">
+    <div class="row mx-0 px-0">
       <div class="col-lg-6" data-aos="fade-down">
-        <div class="row border">
+        <div class="row border me-lg-1 mb-3">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -215,11 +229,12 @@ Expense management procedures always include steps to control unexpected varianc
             <p class="m-0">Developer</p>
             <hr class="my-2">
             <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
+            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-up">
-        <div class="row border">
+        <div class="row border ms-lg-1 mb-lg-3 mb-0">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -228,11 +243,12 @@ Expense management procedures always include steps to control unexpected varianc
             <p class="m-0">Developer</p>
             <hr class="my-2">
             <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
+            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-down">
-        <div class="row border">
+        <div class="row border me-lg-1 mt-3">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -241,11 +257,12 @@ Expense management procedures always include steps to control unexpected varianc
             <p class="m-0">Developer</p>
             <hr class="my-2">
             <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
+            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-up">
-        <div class="row border">
+        <div class="row border ms-lg-1 mt-3">
           <div class="col-3 my-auto">
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
@@ -254,6 +271,7 @@ Expense management procedures always include steps to control unexpected varianc
             <p class="m-0">Developer</p>
             <hr class="my-2">
             <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
+            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
           </div>
         </div>
       </div>
@@ -261,7 +279,7 @@ Expense management procedures always include steps to control unexpected varianc
   </div>
 </div>
 
-<div class="container bg-light my-sm-5 my-0 p-lg-5 p-3" id="faq">
+<div class="container bg-light my-sm-5 my-0 p-lg-5 p-3 text-center" id="faq">
   <div data-aos="fade-down">
   <h2 class="text-center mb-lg-4 my-3">FAQ</h2>
   <div class="accordion" id="accordionExample">
