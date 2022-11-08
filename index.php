@@ -107,7 +107,7 @@ if(isset($_SESSION['message'])) {
     <div class="row text-dark text-center text-lg-start">
       <div class="col-lg-6 col-sm-12 my-auto py-5" data-aos="fade-down">
         <h3>Our Goal, Mission, Vission</h3>
-        <h6 class="text-muted mb-3">Our Goals, Mission and Vission includes the following</h6>
+        <h6 class="text-muted mb-3">Our Goals, Mission and Vision includes the following</h6>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
