@@ -295,7 +295,7 @@ Expense management procedures always include steps to control unexpected varianc
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
           <div class="col-9">
-            <h5 class="mt-2">Developer Dynamiics</h5>
+            <h5 class="mt-2">Ighodaro Enadiakhe</h5>
             <p class="m-0">Developer</p>
             <hr class="my-2">
             <p class="mb-2">I am a dynamic developer who love to code and develop new things. I'm passionate about programming and looking forward to solve more problms using programming.</p>
