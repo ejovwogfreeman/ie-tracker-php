@@ -222,42 +222,70 @@ Expense management procedures always include steps to control unexpected varianc
       <div class="col-lg-6" data-aos="fade-down">
         <div class="row border me-lg-1 mb-3">
           <div class="col-3 my-auto">
-            <img src="./images/default.jpg" alt="" class="img-fluid">
+            <img src="./images/img1.jpg" alt="" class="img-fluid">
           </div>
           <div class="col-9">
-            <h5 class="mt-2">Ejovwo Godbless</h5>
-            <p class="m-0">Developer</p>
+            <h5 class="mt-2">Emmanuel Ezeanyaeche</h5>
+            <p class="m-0">Developer(Leader)</p>
             <hr class="my-2">
-            <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
-            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
+            <p class="mb-2">I'm passionate about innovaton and development. I love coding and web development. Looking forward to developing more projects.</p>
+            <div class="social-media-icon"><a href="http://www.github.com/emmaskiful" target="_blank"><i class="bi bi-github"></i></a><a href="" target="_blank"><i class="bi bi-twitter"></i></a><a href="" target="_blank"><i class="bi bi-linkedin"></i></a></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-up">
         <div class="row border ms-lg-1 mb-lg-3 mb-0">
           <div class="col-3 my-auto">
-            <img src="./images/default.jpg" alt="" class="img-fluid">
+            <img src="./images/img2.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-9">
+            <h5 class="mt-2">Israel Ajagboye</h5>
+            <p class="m-0">Developer(Asst. Leader)</p>
+            <hr class="my-2">
+            <p class="mb-2">Web Developer with structural, motivational approach, excellent communication and problem solving skills, with customer focus, work excellence always in mind.</p>
+            <div class="social-media-icon"><a href="https://github.com/Dr-savant21" target="_blank"><i class="bi bi-github"></i></a><a href="https://twitter.com/Izzy_windz?s=09" target="_blank"><i class="bi bi-twitter"></i></a><a href="https://www.linkedin.com/in/israel-ajagboye-008005243" target="_blank"><i class="bi bi-linkedin"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-down">
+        <div class="row border me-lg-1 mt-3 mb-lg-3 mb-0">
+          <div class="col-3 my-auto">
+            <img src="./images/img3.jpg" alt="" class="img-fluid">
           </div>
           <div class="col-9">
             <h5 class="mt-2">Ejovwo Godbless</h5>
             <p class="m-0">Developer</p>
             <hr class="my-2">
-            <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
-            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
+            <p class="mb-2">I love to learn and grow. I also like trying out new things. I love php+mySQL and I'm looking forward to learn Laravel.</p>
+            <div class="social-media-icon"><a href="https://www.github.com/ejovwogfreeman/" target="_blank"><i class="bi bi-github"></i></a><a href="https://www.twitter.com/ejovwogfreeman/" target="_blank"><i class="bi bi-twitter"></i></a><a href="https://www.linkedin.com/in/godbless-ejovwo/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="row border ms-lg-1 mt-3 mb-lg-3 mb-0">
+          <div class="col-3 my-auto">
+            <img src="./images/img4.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-9">
+            <h5 class="mt-2">Osareniye Osazee</h5>
+            <p class="m-0">Developer</p>
+            <hr class="my-2">
+            <p class="mb-2">I'm a Software Developer and a technology enthusiast who is passionate about problem solving and adapts well to change.</p>
+            <div class="social-media-icon"><a href="https://github.com/eddynice" target="_blank"><i class="bi bi-github"></i></a><a href="https://twitter.com/iameddynics" target="_blank"><i class="bi bi-twitter"></i></a><a href="www.linkedin.com/in/osazee-osareniye-5724a11b4" target="_blank"><i class="bi bi-linkedin"></i></a></div>
           </div>
         </div>
       </div>
       <div class="col-lg-6" data-aos="fade-down">
         <div class="row border me-lg-1 mt-3">
           <div class="col-3 my-auto">
-            <img src="./images/default.jpg" alt="" class="img-fluid">
+            <img src="./images/img5.jpg" alt="" class="img-fluid">
           </div>
           <div class="col-9">
-            <h5 class="mt-2">Ejovwo Godbless</h5>
+            <h5 class="mt-2">Lucky Ayemere Egbefoh</h5>
             <p class="m-0">Developer</p>
             <hr class="my-2">
-            <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
-            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
+            <p class="mb-2">Innovative developer with the objective to make positive impact on clients, colleagues and the society using my experience and skills to design attractive website.</p>
+            <div class="social-media-icon"><a href="https://www.github.com/Ayemereseme1" target="_blank"><i class="bi bi-github"></i></a><a href="" target="_blank"><i class="bi bi-twitter"></i></a><a href="https://www.linkedin.com/in/egbefoh-ayemere-906323256" target="_blank"><i class="bi bi-linkedin"></i></a></div>
           </div>
         </div>
       </div>
@@ -267,11 +295,11 @@ Expense management procedures always include steps to control unexpected varianc
             <img src="./images/default.jpg" alt="" class="img-fluid">
           </div>
           <div class="col-9">
-            <h5 class="mt-2">Ejovwo Godbless</h5>
+            <h5 class="mt-2">Developer Dynamiics</h5>
             <p class="m-0">Developer</p>
             <hr class="my-2">
-            <p class="mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quam.</p>
-            <div class="social-media-icon"><i class="bi bi-github"></i><i class="bi bi-twitter"></i><i class="bi bi-linkedin"></i></div>
+            <p class="mb-2">I am a dynamic developer who love to code and develop new things. I'm passionate about programming and looking forward to solve more problms using programming.</p>
+            <div class="social-media-icon"><a href="https://github.com/Developer-dynamic" target="_blank"><i class="bi bi-github"></i></a><a href="https://twitter.com/Emmytino" target="_blank"><i class="bi bi-twitter"></i></a><a href="www.linkedin.com/in/nadia-is-Just-a-developer" target="_blank"><i class="bi bi-linkedin"></i></a></div>
           </div>
         </div>
       </div>
