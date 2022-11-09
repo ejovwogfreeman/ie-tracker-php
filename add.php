@@ -16,8 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   $title = test_input($_POST["title"]);
   $description = test_input($_POST["description"]);
   $amount = abs(test_input($_POST["amount"]));
-
   $transaction_type = test_input($_POST["transaction_type"]);
+  
   $sql = "INSERT INTO transactions (title,description,transaction_type,amount,user_id) VALUES('$title', '$description', '$transaction_type', '$amount', '$userid')";
 
   if(mysqli_query($conn, $sql)){

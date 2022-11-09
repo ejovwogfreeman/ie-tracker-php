@@ -1,55 +1,57 @@
 <?php
 
 require_once('./config/db.php');
-// include('./config/session.php');
+include('./config/session.php');
+include('./partials/header.php');
 if(!isset($_SESSION)) 
 { 
     session_start(); 
 } 
 
-// define variables and set to empty values
-$title = $description = $amount = $transaction_type = $id = "";
+$title = $description = $amount = $transaction_type = "";
 $titleErr = $descriptionErr = $amountErr = "";
+
 $userid = $_SESSION['user_id'];
 
+
 if($_SERVER["REQUEST_METHOD"] == "GET") {
-//   $title = test_input($_GET["title"]);
-//   $description = test_input($_GET["description"]);
-//   $amount = abs(test_input($_GET["amount"]));
-//   $transaction_type = test_input($_GET["transaction_type"]);
-
-  $sql = "SELECT * FROM transactions WHERE transaction_id=$id";
-
-  $result = mysqli_query($conn, $sql);
-
-  $transactions = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-  $title = $transactions["title"];
-  $description = $transactions["description"];
-  $amount = $transactions["amount"];
-  $transaction_type = $transactions["transaction_type"];
-
-//   $sql = "INSERT INTO transactions (title,description,transaction_type,amount,user_id) VALUES('$title', '$description', '$transaction_type', '$amount', '$userid')";
-
-  if(mysqli_query($conn, $sql)){
-      header('Location: dashboard.php');
-  }else {
-      echo 'There is an error in connection: ' . mysqli_connect_error();
-  }
-}else {
-    $id=$transaction["id"];
-    $title = $transactions["title"];
-    $description = $transactions["description"];
-    $amount = $transactions["amount"];
-    $transaction_type = $transactions["transaction_type"];
-
-    $sql = "UPDATE transactions" .
-            "SET title = $title, description=$description, amount=$amount, transaction_type = $transaction_type" .
-            "WHERE transaction_id = $id";
+    $transaction_id = $_GET["id"];
+    $sql = "SELECT * FROM transactions WHERE transaction_id='$transaction_id'";
 
     $result = mysqli_query($conn, $sql);
-}
 
+    if(mysqli_num_rows($result) > 0) {
+        
+        $row = mysqli_fetch_assoc($result);
+        $title = $_GET['title'] = $row["title"];
+        $description  = $_GET['description'] = $row["description"];
+        $transaction_type = $_GET['transaction_type'] = $row["transaction_type"];
+        $amount = $_GET['amount'] = $row["amount"];
+    }
+}else {
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $transaction_id = $_POST['transaction_id'];
+    $title = test_input($_POST["title"]);
+    $description = test_input($_POST["description"]);
+    $amount = abs(test_input($_POST["amount"]));
+    $transaction_type = test_input($_POST["transaction_type"]);
+
+    echo $title;
+    do {
+    $sql = "UPDATE transactions 
+            SET title='$title', description = '$description', amount='$amount', transaction_type='$transaction_type', transaction_id='$transaction_id', user_id='$userid' 
+            WHERE transaction_id='$transaction_id'";
+
+    if(mysqli_query($conn, $sql)){
+        header("Location: transactions.php");
+        // exit();
+    }else {
+        echo 'There is an error in connection: ' . mysqli_connect_error();
+    }
+    }while (false);
+}
+}
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -69,12 +71,15 @@ function test_input($data) {
   .offcanvas {
     --bs-offcanvas-width: 300px;
   }
+  .top-space {
+        padding: 100px 0px 30px;
+    }
 </style>
 
-<div>
+<div class="container top-space" >
 
-<form class="needs-validation" novalidate method="POST" action="add.php">
-    <input type="hidden" name="id" value=<?php echo $id; ?> />
+<form class="needs-validation" novalidate method="POST" action="edit.php">
+    <input type="hidden" name="transaction_id" value=<?php echo $transaction_id ?> />
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control <?php echo $titleErr ? 'is-invalid' : null ?>" id="title" name="title" value="<?php echo $title;?>" required/>
@@ -97,7 +102,7 @@ function test_input($data) {
     <input type="number"  class="form-control <?php echo $amountErr ? 'is-invalid' : null ?>" id="amount" name="amount" value="<?php echo $amount;?>" required/>
     <div class="invalid-feedback"><?php echo $amountErr?>Amount is required</div>
   </div>
-  <button type="submit" class="btn btn-primary">Add Transaction</button>
+  <button type="submit" class="btn btn-primary">Update Transaction</button>
 </form>
 
 </div>
