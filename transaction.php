@@ -4,45 +4,24 @@ require_once('./config/db.php');
 include('./config/session.php');
 include('./partials/header.php');
 
+    $transaction_id = $_GET['id'];
     $userid = $_SESSION['user_id'];
 
-    $sql = "SELECT * FROM transactions WHERE user_id=$userid ORDER BY -created_at";
+    $sql = "SELECT * FROM transactions WHERE user_id='$userid' AND transaction_id = '$transaction_id'";
 
     $result = mysqli_query($conn, $sql);
+        
+    if(mysqli_num_rows($result) > 0) {
+        // session_start();
+        $row = mysqli_fetch_assoc($result);
+        $_GET['transaction_id'] = $row['transaction_id'];
+        $_GET['title'] = $row['title'];
+        // $_GET['first_name'] = $row['first_name'];
+        // $_GET['sur_name'] = $row['sur_name'];
+        // $_GET['email'] = $row['email'];
 
-    $transactions = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-    $income_array = [];
-    $expense_array = [];
-
-    for($i=0; $i < count($transactions); $i++){
-        if($transactions[$i]['transaction_type'] === 'income') {
-            array_push($income_array, $transactions[$i]['amount']);
-        } else {
-            array_push($expense_array, $transactions[$i]['amount']);
-        }
     }
 
-    $income = array_sum($income_array); 
-    $expense = array_sum($expense_array);
-
-    $balance = $income - $expense;
-
-    $sql2 = "SELECT * FROM wish WHERE wish_user_id=$userid ORDER BY -wish_created_at";
-
-    $result2 = mysqli_query($conn, $sql2);
-
-    $wish = mysqli_fetch_all($result2, MYSQLI_ASSOC);
-
-    $latest_wish = array_slice($wish, 0, 3);
-
-    $wish_array = [];
-
-    for($i=0; $i < count($wish); $i++){
-        array_push($wish_array, $wish[$i]['wish_amount']);
-    }
-
-    $total_wish = array_sum($wish_array);
 
 ?>
 
@@ -132,16 +111,11 @@ include('./partials/header.php');
       <div class="m-0 p-0">
         <h5>Transaction History</h5>
         <div class="m-0 p-0">
-            <?php foreach($transactions as $x): ?>
-              <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">
-                <div class="row"><div class="col-5"><h5 class="m-0"><?php echo $x['title'] ?></h5></div><div class="col-1">:</div><div class="col-6"><small><a href="delete" class="btn btn-primary">EDIT</a> &nbsp;&nbsp;<a href="delete" class="btn btn-danger">DELETE</a></small></div></div>
-                <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?><?php echo '₦'.$x['amount'] ?></p></div></div>
-                <div class="row"><div class="col-5">Description</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['description'] ?></small></div></div>
-                <div class="row"><div class="col-5">Transaction Type</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['transaction_type'] ?></small></div></div>
-                <div class="row"><div class="col-5">Transaction Date</div><div class="col-1">:</div><div class="col-6"><small class="m-0">created at <?php echo $x['created_at'] ?></small></div></div>
+              <div class="bg-light p-2 my-2">
+              <?php echo $_GET['id'];
+              echo $_GET['transaction_id'];
+              echo $transaction_id?>
               </div>
-              </a>
-            <?php endforeach; ?>
         </div>
       </div>
     </div>

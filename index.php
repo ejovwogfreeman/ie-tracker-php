@@ -130,8 +130,8 @@ if(isset($_SESSION['message'])) {
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
             Audit Initiated Expenses:
-Financial fraud is always a problem to keep an eye out for; one that even large corporations are not safe from.
-Expense management procedures always include steps to control unexpected variances in activity that could point to fraudulent behavior. The most common examples of which are mischaracterized or fake entries, overstated expenses, and making multiple reimbursement claims for a single purchase.
+            Financial fraud is always a problem to keep an eye out for; one that even large corporations are not safe from.
+            Expense management procedures always include steps to control unexpected variances in activity that could point to fraudulent behavior. The most common examples of which are mischaracterized or fake entries, overstated expenses, and making multiple reimbursement claims for a single purchase.
             </div>
           </div>
         </div>
