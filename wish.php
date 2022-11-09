@@ -136,8 +136,10 @@ include('./partials/header.php');
 
             <?php foreach($wish as $x): ?>
               <div class="bg-light p-2 my-2 primary">
-                <div class="row"><div class="col-8"><h5 class="m-0"><?php echo $x['wish_title'] ?></h5></div><div class="col-1"><h5 class="m-0">:</h5></div><div class="col-3"><h5 class="m-0">₦<?php echo $x['wish_amount'] ?></h5></div></div>
-                <div class="row"><div class="col-5"><small>Created At <?php echo $x['wish_created_at'] ?></small></div></div>
+                <div class="row"><div class="col-5"><h5 class="m-0"><?php echo $x['wish_title'] ?></h5></div><div class="col-1"><h5 class="m-0">:</h5></div><div class="col-6"><h5 class="m-0">₦<?php echo $x['wish_amount'] ?></h5></div></div>
+                <div class="row"><div class="col-5"><small>Created At <?php echo $x['wish_created_at'] ?></small></div><div class="col-1"><h5 class="m-0">:</h5></div><div class="col-6"><small>
+                <a href="edit_wish.php?id=<?php echo $x['wish_id'] ?>" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>&nbsp;&nbsp;<a href="delete_wish.php?id=<?php echo $x['wish_id'] ?>" class="btn btn-danger"><i class="bi bi-trash3"></i></a></small></div></div>
+               
               </div>
             <?php endforeach; ?>
 

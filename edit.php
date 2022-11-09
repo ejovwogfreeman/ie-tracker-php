@@ -30,27 +30,43 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     }
 }else {
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $transaction_id = $_POST['transaction_id'];
-    $title = test_input($_POST["title"]);
-    $description = test_input($_POST["description"]);
-    $amount = abs(test_input($_POST["amount"]));
-    $transaction_type = test_input($_POST["transaction_type"]);
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    echo $title;
-    do {
-    $sql = "UPDATE transactions 
-            SET title='$title', description = '$description', amount='$amount', transaction_type='$transaction_type', transaction_id='$transaction_id', user_id='$userid' 
-            WHERE transaction_id='$transaction_id'";
+            $transaction_id = $_POST['transaction_id'];
+            $transaction_type = test_input($_POST["transaction_type"]);
 
-    if(mysqli_query($conn, $sql)){
-        header("Location: transactions.php");
-        // exit();
-    }else {
-        echo 'There is an error in connection: ' . mysqli_connect_error();
+            if (empty($_POST['title'])){
+                $titleErr = "Title is required";
+            } else {
+                $title = test_input($_POST["title"]);
+            }
+            if(empty($_POST['description'])){
+                $descriptionErr = "Description is required";
+            } else {
+                $description = test_input($_POST["description"]);
+            }
+            if(empty($_POST['amount'])) {
+                $amountErr = "Amount is required";
+            } else {
+                $amount = abs(test_input($_POST["amount"]));
+            }if($titleErr || $descriptionErr || $amountErr){
+                $titleErr = $titleErr;
+                $descriptionErr = $descriptionErr;
+                $amountErr = $amountErr;
+            }else{
+
+
+            $sql = "UPDATE transactions 
+                    SET title='$title', description = '$description', amount='$amount', transaction_type='$transaction_type', transaction_id='$transaction_id', user_id='$userid' 
+                    WHERE transaction_id='$transaction_id'";
+
+            if(mysqli_query($conn, $sql)){
+                header("Location: dashboard.php");
+            }else {
+                echo 'There is an error in connection: ' . mysqli_connect_error();
+            }
+        }
     }
-    }while (false);
-}
 }
 function test_input($data) {
     $data = trim($data);
@@ -62,18 +78,24 @@ function test_input($data) {
 ?>
 
 <style>
-  form {
-    width: 100%;
-    margin: auto;
-    padding: 20px;
-    border-radius: 5px;
-  }
   .offcanvas {
     --bs-offcanvas-width: 300px;
   }
   .top-space {
-        padding: 100px 0px 30px;
+    padding: 150px 0px 80px;
+  }
+  form {
+    width: 500px;
+    margin: auto;
+    background-color: #ebecf0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    form {
+      width: 95%;
     }
+  }
 </style>
 
 <div class="container top-space" >
@@ -83,12 +105,12 @@ function test_input($data) {
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control <?php echo $titleErr ? 'is-invalid' : null ?>" id="title" name="title" value="<?php echo $title;?>" required/>
-    <div class="invalid-feedback"><?php echo $titleErr?>Title is required</div>
+    <div class="invalid-feedback"><?php echo $titleErr?></div>
   </div>
   <div class="mb-3">
     <label for="desctiption" class="form-label">Description</label>
     <textarea  class="form-control <?php echo $descriptionErr ? 'is-invalid' : null ?>" id="desctiption" rows="3" name="description" required><?php echo $description;?></textarea>
-    <div class="invalid-feedback"><?php echo $descriptionErr?>Description is required</div>
+    <div class="invalid-feedback"><?php echo $descriptionErr?></div>
   </div>
   <div class="mb-3">
     <label for="transaction_type" class="form-label">Transaction Type</label>
@@ -100,7 +122,7 @@ function test_input($data) {
   <div class="mb-3">
     <label for="amount" class="form-label">Amount</label>
     <input type="number"  class="form-control <?php echo $amountErr ? 'is-invalid' : null ?>" id="amount" name="amount" value="<?php echo $amount;?>" required/>
-    <div class="invalid-feedback"><?php echo $amountErr?>Amount is required</div>
+    <div class="invalid-feedback"><?php echo $amountErr?></div>
   </div>
   <button type="submit" class="btn btn-primary">Update Transaction</button>
 </form>

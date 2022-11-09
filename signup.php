@@ -109,6 +109,10 @@ function test_input($data) {
 <div class="container top-space" id="home">
 
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<h3 class="mt-3 mb-4 text-center">
+  <i class="bi bi-coin"></i>
+  IE-Tracker
+</h3>
 <div class="mb-3">
     <label for="exampleInputUsername" class="form-label">Username</label>
     <div class="input-group"><div class="input-group-text" id="basic-addon1"><i class="bi bi-at"></i></div><input class="form-control <?php echo $usernameErr ? 'is-invalid' : null ?>" id="exampleInputUsername" name="username" value="<?php echo $username;?>" ></div>

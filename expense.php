@@ -119,7 +119,8 @@ include('./partials/header.php');
         <div class="m-0 p-0">
             <?php foreach($all_expense as $x): ?>
               <div class="bg-light p-2 my-2 <?php echo $x['transaction_type']=='income' ? 'success' : 'danger'?>">
-                <h5 class="m-0"><?php echo $x['title'] ?></h5>
+              <div class="row"><div class="col-5"><h5 class="m-0"><?php echo $x['title'] ?></h5></div><div class="col-1">:</div><div class="col-6"><small>
+                <a href="edit.php?id=<?php echo $x['transaction_id'] ?>" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>&nbsp;&nbsp;<a href="delete.php?id=<?php echo $x['transaction_id'] ?>" class="btn btn-danger"><i class="bi bi-trash3"></i></a></small></div></div>
                 <div class="row"><div class="col-5">Amount</div><div class="col-1">:</div><div class="col-6"><p class="m-0 <?php echo $x['transaction_type']=='income' ? 'text-success' : 'text-danger'?>"><?php echo $x['transaction_type']=='income' ? '+' : '-'?><?php echo '₦'.$x['amount'] ?></p></div></div>
                 <div class="row"><div class="col-5">Description</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['description'] ?></small></div></div>
                 <div class="row"><div class="col-5">Transaction Type</div><div class="col-1">:</div><div class="col-6"><small class="m-0"><?php echo $x['transaction_type'] ?></small></div></div>

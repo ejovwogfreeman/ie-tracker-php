@@ -79,6 +79,10 @@ function test_input($data) {
 <div class="container top-space" id="home">
 
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <h3 class="mt-3 mb-4 text-center">
+      <i class="bi bi-coin"></i>
+      IE-Tracker
+    </h3>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <div class="input-group"><div class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></div><input class="form-control <?php echo $emailErr ? 'is-invalid' : null ?>" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php echo $email;?>" ></div>
