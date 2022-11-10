@@ -101,7 +101,7 @@ function test_input($data) {
 <div class="container top-space" >
 
 <form class="needs-validation" novalidate method="POST" action="edit.php">
-    <input type="hidden" name="transaction_id" value=<?php echo $transaction_id ?> />
+  <input type="hidden" name="transaction_id" value=<?php echo $transaction_id ?> />
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
     <input type="text" class="form-control <?php echo $titleErr ? 'is-invalid' : null ?>" id="title" name="title" value="<?php echo $title;?>" required/>
@@ -128,5 +128,7 @@ function test_input($data) {
 </form>
 
 </div>
+
+<?php include('./partials/footer.php') ?>
 
 

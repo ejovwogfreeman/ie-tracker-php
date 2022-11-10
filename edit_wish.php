@@ -107,4 +107,6 @@ function test_input($data) {
 
 </div>
 
+<?php include('./partials/footer.php') ?>
+
 
