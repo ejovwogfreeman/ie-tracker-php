@@ -88,7 +88,7 @@ function test_input($data) {
   }
 </style>
 
-<div class="container top-space" >
+<div class="container top-space" id="home">
 
 <form class="needs-validation" novalidate method="POST" action="edit_wish.php">
   <input type="hidden" name="wish_id" value=<?php echo $wish_id ?> />

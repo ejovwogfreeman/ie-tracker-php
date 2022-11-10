@@ -98,7 +98,7 @@ function test_input($data) {
   }
 </style>
 
-<div class="container top-space" >
+<div class="container top-space" id="home">
 
 <form class="needs-validation" novalidate method="POST" action="edit.php">
   <input type="hidden" name="transaction_id" value=<?php echo $transaction_id ?> />
