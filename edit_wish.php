@@ -91,6 +91,8 @@ function test_input($data) {
 <div class="container top-space" id="home">
 
 <form class="needs-validation" novalidate method="POST" action="edit_wish.php">
+  <h5>Update Wish Form</h5>
+  <hr>
   <input type="hidden" name="wish_id" value=<?php echo $wish_id ?> />
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
@@ -103,6 +105,7 @@ function test_input($data) {
     <div class="invalid-feedback"><?php echo $wish_amountErr?></div>
   </div>
   <button type="submit" class="btn btn-primary">Update Wish</button>
+  <a href="wish.php" class="btn btn-secondary">Cancel</a>
 </form>
 
 </div>

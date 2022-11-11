@@ -101,6 +101,8 @@ function test_input($data) {
 <div class="container top-space" id="home">
 
 <form class="needs-validation" novalidate method="POST" action="edit.php">
+<h5>Update Transaction Form</h5>
+  <hr>
   <input type="hidden" name="transaction_id" value=<?php echo $transaction_id ?> />
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
@@ -125,6 +127,7 @@ function test_input($data) {
     <div class="invalid-feedback"><?php echo $amountErr?></div>
   </div>
   <button type="submit" class="btn btn-primary">Update Transaction</button>
+  <a href="transactions.php" class="btn btn-secondary">Cancel</a>
 </form>
 
 </div>
